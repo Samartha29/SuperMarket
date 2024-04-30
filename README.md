@@ -1,39 +1,20 @@
 
-# supermart-backend
+# supermart
 
-A web based application for an online supermart. This repository contains backend for this application built using Spring Boot.
+Supermart Backend
+Welcome to the Supermart Backend repository! This project powers a web-based application for an online supermart, offering a seamless shopping experience. Built using Spring Boot, it handles user management, order processing, and more.
 
-### User Management
-  - A user can be ```admin, manager or customer```
-  - Admin is the super user with all permissions.
-  - Users (customer, admin and manager) will have information such as user name, user id etc.
-  - ```id (unique across the system)```, phone number, and email id, and address.
-  - An existing user should log into the system with user id and password.
-  - New customers are permitted to register.
-  - Manager/admin can add or delete items, modify details about the items (price/qty/offers etc.)
-  - A user can ```withdraw``` from the Application.
-  - Password change (reset) facility is provided.
-
-### Admin/Manager Publishing Item Details
-  - Manager or admin users should be allowed to ```publish the details of the items``` made available for sale. Details needed are item_name, item_code, price, offer if any, qty available, delivery time etc.
-  - A manager or admin can ```delete the published item``` whenever required.
-
-### Customer Order Management
-  - A customer should be allowed to ```view/search the items``` published/available for sale.
-  - Select items to the cart.
-  - Customers can register and order items.
-  - Confirm order and make payment
-  - User should get a ```confirmation message``` with expected delivery date.
-  - User will have a Wallet from where payments will be made, and user can ```top-up the wallet``` if necessary. But at the time of registration must start with minimum of 1000/-.
-  - User can add review about the website.
-
-### Other Functionality
-  - Admin user should be able to generate reports like – items sold on a date, customer order details(summary) for a month, item stock status etc.
-  - Any user can generate his/her ```order history``` (summary) for a given month.
-
+Features
+User Management: Admins, managers, and customers can register and manage their accounts with ease.
+Item Management: Admins and managers can add, modify, and delete items, ensuring accurate product listings.
+Order Management: Customers can browse items, add them to their cart, place orders, and make payments securely.
+Wallet System: Users have a wallet for convenient payments, with an option to top-up as needed.
+Review System: Customers can provide feedback and reviews about their shopping experience.
+API Reference
+Explore the API endpoints for different user roles:
 
 ## API Reference
-
+Admin Endpoints: Manage users, products, generate reports, and more.
 ### Admin Endpoints
 
 ```java
@@ -57,7 +38,7 @@ A web based application for an online supermart. This repository contains backen
   GET /admin/monthlyRevenue
   GET /admin/orders
 ```
-
+Manager Endpoints: Add, update, and delete products.
 ### Manager Endpoints
 
 ```java
@@ -69,6 +50,7 @@ A web based application for an online supermart. This repository contains backen
   GET /manager/getbyPrice
 ```
 
+Customer Endpoints: Manage user details, orders, and cart.
 ### Customer Endpoints
 
 ```java
@@ -91,8 +73,7 @@ A web based application for an online supermart. This repository contains backen
   POST /customer/sendOrder
   POST /customer/addReview
 ```
-
-
+Login Endpoints: Authenticate users.
 ### Login Endpoints
 
 ```java
@@ -102,7 +83,7 @@ A web based application for an online supermart. This repository contains backen
   POST /login/auth/customer/getID
   POST /login/auth/admin/getID
 ```
-
+Product Endpoints: Manage product information.
 ### Product Endpoints
 
 ```java
@@ -115,7 +96,6 @@ A web based application for an online supermart. This repository contains backen
   POST /product/changePrice
   GET /product/getbyPrice
 ```
-
 ## Run Locally
 
 1. clone this git repo
@@ -181,5 +161,16 @@ A web based application for an online supermart. This repository contains backen
 - Spring Mail
 - JWT
 
-### Link to Frontend Repo
-- <a href = "https://github.com/pavas23/supermart-frontend">Frontend Repo</a>
+Feel free to contribute and enhance the Supermart Backend! 🚀
+
+
+
+
+
+
+
+
+
+
+
+
